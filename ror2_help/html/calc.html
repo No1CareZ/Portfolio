@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>ROR2.HELP</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../static/css/stye.css">
+		<link rel="icon" href="../static/im/256x256.png">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js" integrity="sha512-kdpGWY5wS6yTcqKxo6c14+4nk99hWFTwQ5XtSyELJxVwpWH23MN80iTVzkMg1jv3FZbdKPbFWLr98AA03/zPuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	</head>
+	<body class = "body">
+		<header class = "header">
+			<img class = "logo" src="../static/im/R.png">
+			<div class = "navbar">
+				<a href="index.html">MAIN PAGE</a>
+				<a>CALCULATOR</a>
+				<div class = "dropdown" style = "float: right">
+					<button>
+						<a href="#" class="right"> GUIDES
+							<i class="fa fa-caret-down"></i>
+						</a>
+					</button>
+					<div class = "dropdown-content" >
+						<a href="help.html">GUIDELINE</a>
+						<a href="tips.html">TIPS</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class = "main">
+			<div>
+				<div class="row">
+					<div class="half">
+						<h2>ITEMS</h2>
+						<p style = "margin-bottom: 2.5vw;">Choose items which your loadout contained by: typing in amount of selected items</p>
+						<div class = "item-list">
+							<article class = "grid-item">
+								<div class = "item-list-sub">
+									<div>
+										<img src = "../static/im/items/aid.png" class = "img"
+										alt = "menu item" />
+									</div>
+									<div>
+										<input type = "number" id="quantity" name="quantity" min="0" max="256">
+									</div>
+								</div>
+							</article>
+							<script src="../js/grid.js"></script>
+						</div>
+						<p style = "margin-top: 2.5vw;">Charecter level:</p>
+						<div style = "display: flex; flex-direction: column; align-items: center;">
+							<span id = "marker" class = "marker-value">Selected lvl: 75</span>
+							<input type = "range" id = "lvl" name = "lvl" min = 0 max = 150 class = "sli">
+							<div class = "mark-slide">
+								<span>0</span><span>150</span>
+							</div>
+							<script src="../js/slider.js"></script>
+						</div>
+						<p style = "margin-top: 2.5vw;">Select difficulty level:</p>
+						<div style = "display: flex; flex-direction: row; justify-content: center;">
+							<input type="radio" id="drizzle" name="diff" value="1.5">
+							<label for="drizzle">
+								<i class = "rad-icon"><img src = "../static/im/drizzle.png" style = "height: auto; width: 5.0vw;"/></i>
+								<span>Drizzle</span>
+							</label>
+							<input type="radio" id="rainstorm" name="diff" value="1">
+							<label for="rainstorm">
+								<i class = "rad-icon"><img src = "../static/im/rainstorm.png" style = "height: auto; width: 5.0vw;"/></i>
+								<span>Rainstorm</span>
+							</label>
+							<input type="radio" id="monsoon" name="diff" value="0.6">
+							<label for="monsoon">
+								<i class = "rad-icon"><img src = "../static/im/monsoon.png" style = "height: auto; width: 5.0vw;"/></i>
+								<span>Monsoon</span>
+							</label>
+							<input type="radio" id="eclipse" name="diff" value="0.2"
+							checked>
+							<label for="eclipse">
+								<i class = "rad-icon"><img src = "../static/im/eclipse.png" style = "height: auto; width: 5.0vw;"/></i>
+								<span>Eclipse</span>
+							</label>
+						</div>
+						<p style = "margin-top: 2.5vw;">Copy your loadout:</p>
+						<div style = "display: flex; flex-direction: row; justify-content: center;">
+							<button id = "clip" class = "button">
+								<span>COPY TO CLIPBOARD</span>
+							</button>
+							<script src="../js/download.js"></script>
+						</div>
+						<p style = "margin-top: 2.5vw;">Put here your loadout:</p>
+						<div style = "display: flex; flex-direction: row; justify-content: center;">
+							<input type="text" id="built" style = "margin-right: 1vw; margin-top: 2vh; height: 1.5vw;">
+							<button id = "put" class = "button">
+								<span>LOAD LOADOUT</span>
+							</button>
+							<script src="../js/load.js"></script>
+						</div>
+						
+					</div>
+					<div class="half">
+						<h2>SURVIVABILITY OVERTIME</h2>
+						<div style = "display: flex; flex-direction: row; justify-content: center;">
+							<button id = "submit" class = "button">
+								<span>CALCULATE</span>
+							</button>
+						</div>
+						<div style = "display: flex; flex-direction: row; justify-content: center;">
+							<canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+							<script src="../js/chart.js"></script>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class = "footer">
+			<div class = "footer-div">
+				<div class = "footer-div-up">
+					<h1></h1>				
+					<div class="morphing">
+						<div class="word">MADE BY ALEX</div>
+						<div class="word">MADE BY KIRA</div>
+						<div class="word">MADE BY NO1CAREZ</div>
+						<div class="word">MADE BY LOSING HERO</div>
+					</div>
+				</div>
+				<div class = "footer-div-down">
+					<div class="half">
+						<h3>RIGHTS</h3>
+						<p>We have no rights for Risk of Rain 2 game and we are pertty sure we dont have any for the site. Isn't this crazy? Crazy? I was crazy once. They locked me in a room. A rubber room! A rubber room with rats,and rats make me crazy. Crazy? I was crazy once. They locked me in a room. A rubber room! A rubber room with rats,and rats make me crazy. Crazy? I was crazy once. They locked me in a room. A rubber room! A rubber room with rats,and rats make me crazy. Crazy? I was crazy once. They locked me in a room. A rubber room! A rubber room with rats,and rats make me crazy. Crazy? I was crazy once. They locked me in a room. A rubber room!</p>
+					</div>
+					<div class="half">
+						<div class = "row">
+							<div class="half">
+							</div>
+							<div class="half">
+								<h3>QUICK LINKS</h3>
+								<ul class = "footer-link">
+									<li><a href="https://www.reddit.com/r/copypasta/comments/a6lkok/crazy_i_was_crazy_once/">Crazy</a></li>
+									<li><a href="https://store.steampowered.com/app/632360/Risk_of_Rain_2/">Risk of rain 2</a></li>
+									<li><a href="https://riskofrain2.fandom.com/wiki/Risk_of_Rain_2_Wiki">Risk of rain wiki</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
